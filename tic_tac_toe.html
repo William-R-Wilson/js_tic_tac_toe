@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="tic_tac_toe.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+      <script src="./tic_tac_toe.js" type = "text/javascript"></script>
+    </head>
+<body>
+    <div class="container-fluid">
+
+      <div class="row text-center" style="margin-top: 15px;">
+        <a id="play-button" href="#choosePiece" type="button" class="btn btn-lg" data-toggle="modal">Start playing</a>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center" id="gameboard">
+          <span id="game-piece-0" onClick="clickPiece(0, this.id)"></span>
+          <span id="game-piece-1" onClick="clickPiece(1, this.id)"></span>
+          <span id="game-piece-2" onClick="clickPiece(2, this.id)"></span>
+          <span id="game-piece-3" onClick="clickPiece(3, this.id)"></span>
+          <span id="game-piece-4" onClick="clickPiece(4, this.id)"></span>
+          <span id="game-piece-5" onClick="clickPiece(5, this.id)"></span>
+          <span id="game-piece-6" onClick="clickPiece(6, this.id)"></span>
+          <span id="game-piece-7" onClick="clickPiece(7, this.id)"></span>
+          <span id="game-piece-8" onClick="clickPiece(8, this.id)"></span>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div id="choosePiece" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 id="myModalLabel">Choose X or O</h3>
+              </div>
+              <div class="modal-body">
+                <button class="btn btn-default" data-dismiss="modal" onclick="startGame('X')">X</button>
+                <button class="btn btn-default" data-dismiss="modal" onclick="startGame('O')">O</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
